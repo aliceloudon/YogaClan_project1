@@ -22,3 +22,8 @@ get '/poses/:id' do
   @pose = Pose.find(params[:id])
   erb(:show)
 end
+
+get '/poses/:id/edit' do
+  @pose = Pose.find(params[:id])
+  erb(:edit)
+end

@@ -1,0 +1,8 @@
+<% @poses.each do |pose| %>
+
+  <img src = <%= pose.image %> />
+  <p> Pose Name: <%= pose.name %> </p>
+  <p> Hold Time: <%= pose.hold_time %> </p>
+  <p> Effort Level: <%= pose.effort_level %> </p>
+ 
+<% end %>

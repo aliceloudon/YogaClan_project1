@@ -5,7 +5,7 @@ Pose.delete_all
 
 pose1 = Pose.new({
   "name" => "Childs Pose",
-  "logo" => "",
+  "image" => "http://kimfischyoga.com/wp-content/uploads/2010/08/20100215-0010.jpg",
   "hold_time" => 30,
   "effort_level" => 1
   })

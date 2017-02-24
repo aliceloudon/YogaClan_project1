@@ -7,3 +7,19 @@ img {
   width: 20%;
   height: 20%;
 }
+
+.grid {
+  border: solid 1px hotpink;
+}
+
+.grid-row {
+  display: flex;
+  flex-direction: column;
+}
+
+.cell {
+  flex: 1;
+  padding: 10px;
+  border: solid 1px grey;
+  height: 50px;
+}

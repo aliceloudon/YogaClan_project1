@@ -33,3 +33,9 @@ post '/poses/:id' do
   pose.update
   redirect to "/poses/#{pose.id}"
 end
+
+post '/poses/:id/delete' do
+  pose = Pose.find(params[:id])
+  pose.delete
+  redirect to "/poses"
+end

@@ -1,7 +1,9 @@
 require_relative('../models/pose.rb')
+require_relative('../models/sequence.rb')
 require('pry')
 
 Pose.delete_all
+# Sequence.delete_all
 
 pose1 = Pose.new({
   "name" => "Child Pose",
@@ -27,6 +29,14 @@ pose3 = Pose.new({
 pose1.save
 pose2.save
 pose3.save
+
+sequence1 = Sequence.new({
+  "name" => "Invigorate", 
+  "total_time" => "#{@pose1.hold_time} + #{@pose2.hold_time} + #{@pose3.hold_time}", 
+  "average_effort_level" => "#{@pose1.effort_level} + #{@pose2.effort_level}"
+  })
+
+sequence1.save
 
 binding.pry
 nil

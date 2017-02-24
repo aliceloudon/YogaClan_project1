@@ -47,6 +47,11 @@ class Pose
     SqlRunner.run(sql)
   end
 
+  def delete
+    sql = "DELETE FROM poses WHERE id = #{@id}"
+    SqlRunner.run(sql)
+  end
+
 
   #Helper methods for mapping
   def self.map_items(sql)

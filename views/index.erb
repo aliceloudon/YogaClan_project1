@@ -1,8 +1,19 @@
+<div class="grid">
+<div class="grid-row">
+
+
 <% @poses.each do |pose| %>
+
+<div class="cell">
 
   <img src = <%= pose.image %> />
   <p> Pose Name: <%= pose.name %> </p>
-  <p> Hold Time: <%= pose.hold_time %> </p>
+  <p> Hold Time: <%= pose.hold_time %> seconds </p>
   <p> Effort Level: <%= pose.effort_level %> </p>
  
+</div>
+
 <% end %>
+
+</div>
+</div>

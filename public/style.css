@@ -1,5 +1,9 @@
+nav li {
+  display: inline;
+}
+
 img {
   display: block;
-  width: 200px;
-  height: 240px;
+  width: 20%;
+  height: 20%;
 }

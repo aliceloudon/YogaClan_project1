@@ -10,7 +10,15 @@ pose1 = Pose.new({
   "effort_level" => 1
   })
 
+pose2 = Pose.new({
+  "name" => "Downward Dog",
+  "image" => "https://media1.popsugar-assets.com/files/thumbor/Wz6oS_MHo9hkdsBFKomQYoDStQA/fit-in/2048xorig/filters:format_auto-!!-:strip_icc-!!-/2014/03/03/084/n/1922729/9a2d9db16ec7e401_Down-Dog-Blue.jpg",
+  "hold_time" => 20,
+  "effort_level" => 3
+  })
+
 pose1.save
+pose2.save
 
 binding.pry
 nil

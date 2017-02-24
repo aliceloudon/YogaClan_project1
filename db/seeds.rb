@@ -17,8 +17,16 @@ pose2 = Pose.new({
   "effort_level" => 3,
   })
 
+pose3 = Pose.new({
+  "name" => "Tree Pose",
+  "image" => "https://www.drweil.com/wp-content/uploads/2016/12/health-wellness_balanced-living_exercise-fitness_tree-pose_2716x1810_000048057186.jpg",
+  "hold_time" => 10,
+  "effort_level" => 3,
+  })
+
 pose1.save
 pose2.save
+pose3.save
 
 binding.pry
 nil

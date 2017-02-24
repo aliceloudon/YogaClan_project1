@@ -27,3 +27,9 @@ get '/poses/:id/edit' do
   @pose = Pose.find(params[:id])
   erb(:edit)
 end
+
+post '/poses/:id' do
+  pose = Pose.new(params)
+  pose.update
+  redirect to "/poses/#{pose.id}"
+end

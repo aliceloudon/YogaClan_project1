@@ -36,6 +36,17 @@ class Pose
     return result
   end
 
+  def update
+    sql = "UPDATE poses SET
+      name = '#{@name}',
+      image = '#{@image}',
+      hold_time = #{@hold_time},
+      effort_level = #{@effort_level}
+      WHERE id = #{@id}
+      ;"
+    SqlRunner.run(sql)
+  end
+
 
   #Helper methods for mapping
   def self.map_items(sql)

@@ -29,6 +29,14 @@ class Pose
     return self.map_items(sql)
   end
 
+  def self.find(id)
+    sql = "SELECT * FROM poses WHERE id = #{id}"
+    pose = SqlRunner.run(sql)
+    result = Pose.new(pose.first)
+    return result
+  end
+
+
   #Helper methods for mapping
   def self.map_items(sql)
     poses = SqlRunner.run(sql)

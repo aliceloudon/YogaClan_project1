@@ -17,3 +17,8 @@ post '/poses' do
   @pose.save
   redirect to '/poses'
 end
+
+get '/poses/:id' do
+  @pose = Pose.find(params[:id])
+  erb(:show)
+end

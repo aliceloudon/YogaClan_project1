@@ -1,0 +1,11 @@
+<img src = <%= @pose.image %> />
+<p> Pose Name: <%= @pose.name %> </p>
+<p> Hold Time: <%= @pose.hold_time %> seconds </p>
+<p> Effort Level: <%= @pose.effort_level %> </p>
+
+
+<a href="/poses/<%= @pose.id %>/edit">Edit Pose</a>
+
+<form method="POST" action="/poses/<%= @pose.id %>/delete">
+  <input type="submit" value="Delete Pose"/>  
+</form>

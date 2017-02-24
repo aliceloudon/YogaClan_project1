@@ -24,4 +24,21 @@ class Pose
     SqlRunner.run(sql)
   end
 
+  def self.all
+    sql = "SELECT * FROM poses"
+    return self.map_items(sql)
+  end
+
+  #Helper methods for mapping
+  def self.map_items(sql)
+    poses = SqlRunner.run(sql)
+    result = poses.map { |pose| Pose.new( pose ) }
+    return result
+  end
+
+  def self.map_item(sql)
+    result = Pose.map_items(sql)
+    return result.first
+  end
+
 end

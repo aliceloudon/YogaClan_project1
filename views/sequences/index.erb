@@ -1,6 +1,7 @@
 <% @sequences.each do |sequence| %>
 
-  <a href="/sequences/<%= sequence.id %>">Show Sequence<a>
-  <p>Name: <%= sequence.name %></p>
+  <% pose_1 = Pose.find(sequence.pose_id_1) %>
+  <a href="/sequences/<%= sequence.id %>"><img src = <%= pose_1.image %> /><a>
+  <p><%= sequence.name %></p>
 
 <% end %>

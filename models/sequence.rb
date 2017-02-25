@@ -3,22 +3,19 @@ require_relative('../db/sql_runner.rb')
 class Sequence
 
   attr_reader :id
-  attr_accessor :name, :total_time, :average_effort_level, :pose_id_1, :pose_id_2, :pose_id_3, :pose_id_4, :pose_id_5
+  attr_accessor :name, :total_time, :average_effort_level, :pose_id_1, :pose_id_2
 
   def initialize(options)
     @id = options['id']
     @name = options['name']
     @total_time = options['total_time'].to_i
     @average_effort_level = options['average_effort_level'].to_i
-    @pose_id_1 = options['pose_id_1'].to_i
-    @pose_id_2 = options['pose_id_2'].to_i
-    @pose_id_3 = options['pose_id_3'].to_i
-    @pose_id_4 = options['pose_id_4'].to_i
-    @pose_id_5 = options['pose_id_5'].to_i
+    @pose_id_1 = options['pose_id_1']
+    @pose_id_2 = options['pose_id_2']
   end
 
   def save
-    sql = "INSERT INTO sequences (name, total_time, average_effort_level, pose_id_1, pose_id_2, pose_id_3, pose_id_4, pose_id_5) VALUES ('#{@name}', #{@total_time}, #{@average_effort_level}, #{@pose_id_1}, #{@pose_id_2}, #{@pose_id_3}, #{@pose_id_4}, #{@pose_id_5}) RETURNING *;"
+    sql = "INSERT INTO sequences (name, total_time, average_effort_level, pose_id_1, pose_id_2) VALUES ('#{@name}', #{@total_time}, #{@average_effort_level}, #{@pose_id_1}, #{@pose_id_2}) RETURNING *;"
     sequence = SqlRunner.run(sql).first
     @id = sequence['id'].to_i
   end
@@ -47,9 +44,6 @@ class Sequence
       average_effort_level = #{@average_effort_level},
       pose_id_1 = #{@pose_id_1}
       pose_id_2 = #{@pose_id_2}
-      pose_id_3 = #{@pose_id_3}
-      pose_id_4 = #{@pose_id_4}
-      pose_id_5 = #{@pose_id_5}
       WHERE id = #{@id}
       ;"
     SqlRunner.run(sql)

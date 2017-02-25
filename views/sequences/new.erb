@@ -8,8 +8,8 @@
     </li>
 
     <li>
-      <label for="total_time"> Total Time (in minutes): </label>
-      <input type="text" name="total_time" id="total_time"/>
+      <label for="total_time"> Total Time: </label>
+      <input type="total_time" name="total_time" id="total_time"/>
     </li>
 
     <li>
@@ -18,17 +18,27 @@
     </li>
 
     <li>
-      <label for="pose_id_1"> Pose: </label>
-      <input type="pose_id_1" name="pose_id_1" id="pose_id_1"/>
+      <label for="pose_id_1"> Pose 1: </label>
+      <select id="pose_id" name="pose_id_1">
+        <% poses = Pose.all %>
+        <% poses.each do |pose| %>
+          <option value = "<% pose.id %>"><%= pose.name %></option>
+        <% end %>  
+      </select>
     </li>
 
     <li>
-      <label for="pose_id_2"> Pose: </label>
-      <input type="pose_id_2" name="pose_id_2" id="pose_id_2"/>
+      <label for="pose_id_2"> Pose 2: </label>
+      <select id="pose_id_2" name="pose_id_2">
+        <% poses = Pose.all %>
+        <% poses.each do |pose| %>
+          <option value = "<% pose.id %>"><%= pose.name %></option>
+        <% end %>  
+      </select>
     </li>
 
     <li>
-      <input type="submit" name="Save"/>
+      <input type="submit" name="save"/>
     </li>
 
   </ul>

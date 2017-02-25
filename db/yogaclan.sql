@@ -15,8 +15,5 @@ CREATE TABLE sequences (
   total_time INT4,
   average_effort_level INT4,
   pose_id_1 INT4 REFERENCES poses(id),
-  pose_id_2 INT4 REFERENCES poses(id),
-  pose_id_3 INT4 REFERENCES poses(id),
-  pose_id_4 INT4 REFERENCES poses(id),
-  pose_id_5 INT4 REFERENCES poses(id)
+  pose_id_2 INT4 REFERENCES poses(id)
 );

@@ -1,0 +1,10 @@
+<p> Sequence Name: <%= @sequence.name %> </p>
+<p> Total Time: <%= @sequence.total_time %> minutes </p>
+<p> Average Effort Level: <%= @sequence.average_effort_level %> </p>
+
+
+<a href="/sequences/<%= @sequence.id %>/edit">Edit Sequence</a>
+
+<form method="POST" action="/sequences/<%= @sequence.id %>/delete">
+  <input type="submit" value="Delete Sequence"/>  
+</form>

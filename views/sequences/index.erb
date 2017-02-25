@@ -1,7 +1,13 @@
+<div class = "grid">
+<div class = "grid-row">
+
 <% @sequences.each do |sequence| %>
-
-  <% pose_1 = Pose.find(sequence.pose_id_1) %>
-  <a href="/sequences/<%= sequence.id %>"><img src = <%= pose_1.image %> /><a>
-  <p><%= sequence.name %></p>
-
+  <div class="cell">
+    <% pose_1 = Pose.find(sequence.pose_id_1) %>
+    <a href="/sequences/<%= sequence.id %>"><img src = <%= pose_1.image %> /></a>
+    <p><%= sequence.name %></p>
+  </div>
 <% end %>
+
+</div>
+</div>

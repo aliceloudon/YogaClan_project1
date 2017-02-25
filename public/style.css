@@ -4,9 +4,8 @@ nav li {
 }
 
 img {
-  display: block;
-  width: 20%;
-  height: 20%;
+  width: 200px;
+  height: 200px;
 }
 
 .grid {
@@ -14,6 +13,7 @@ img {
 }
 
 .grid-row {
+  display: flex;
   flex-direction: row;
 }
 
@@ -21,9 +21,7 @@ img {
   flex: 1;
   padding: 10px;
   margin: 4px;
-  border: 1px solid black;
   display: inline-block;
-  background-color: #f7e3a0;
   size: 100%;
   justify-content: space-around;
 }

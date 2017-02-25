@@ -15,17 +15,17 @@
     <li>
       <label for="hold_time"> Hold Time (in seconds): </label>
       <select id="hold_time" name="hold_time">
-        <option <%= "selected" if @pose.hold_time == "10" %> 
+        <option <%= "selected" if @pose.hold_time == 10 %> 
         value=10> 10 </option>
-        <option <%= "selected" if @pose.hold_time == "20" %> 
+        <option <%= "selected" if @pose.hold_time == 20 %> 
         value=20> 20 </option>
-        <option <%= "selected" if @pose.hold_time == "30" %> 
+        <option <%= "selected" if @pose.hold_time == 30 %> 
         value=30> 30 </option>
-        <option <%= "selected" if @pose.hold_time == "40" %> 
+        <option <%= "selected" if @pose.hold_time == 40 %> 
         value=40> 40 </option>
-        <option <%= "selected" if @pose.hold_time == "50" %> 
+        <option <%= "selected" if @pose.hold_time == 50 %> 
         value=50> 50 </option>
-        <option <%= "selected" if @pose.hold_time == "60" %> 
+        <option <%= "selected" if @pose.hold_time == 60 %> 
         value=60> 60 </option>
       </select>
     </li>
@@ -33,21 +33,21 @@
     <li>
       <label for="effort_level"> Effort Level: </label>
       <select id="effort_level" name="effort_level">
-        <option <%= "selected" if @pose.effort_level == "1" %> 
+        <option <%= "selected" if @pose.effort_level == 1 %> 
         value=1> 1 </option>
-        <option <%= "selected" if @pose.effort_level == "2" %> 
+        <option <%= "selected" if @pose.effort_level == 2 %> 
         value=2> 2 </option>
-        <option <%= "selected" if @pose.effort_level == "3" %> 
+        <option <%= "selected" if @pose.effort_level == 3 %> 
         value=3> 3 </option>
-        <option <%= "selected" if @pose.effort_level == "4" %> 
+        <option <%= "selected" if @pose.effort_level == 4 %> 
         value=4> 4 </option>
-        <option <%= "selected" if @pose.effort_level == "5" %> 
+        <option <%= "selected" if @pose.effort_level == 5 %> 
         value=5> 5 </option>
       </select>
     </li>
 
     <li>
-      <input type="submit" name="Test"/>
+      <input type="submit" value="Save"/>
     </li>
 
   </ul>

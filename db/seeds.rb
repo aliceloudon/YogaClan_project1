@@ -47,12 +47,36 @@ pose6 = Pose.new({
   "effort_level" => 1,
   })
 
+pose7 = Pose.new({
+  "name" => "Full Forward Bend",
+  "image" => "https://media1.popsugar-assets.com/files/thumbor/HKMByaCczQIOpbp_kvwXOki3jyk/fit-in/1024x1024/filters:format_auto-!!-:strip_icc-!!-/2014/01/23/796/n/1922729/d365275eacc57ccb_Standing-Forward-Bend/i/Standing-Forward-Bend-Pose.jpg",
+  "hold_time" => 30,
+  "effort_level" => 4,
+  })
+
+pose8 = Pose.new({
+  "name" => "Chair Pose",
+  "image" => "https://media1.popsugar-assets.com/files/thumbor/BBDlawBS7LXbC4A6fkwUDIcb1EI/fit-in/1024x1024/filters:format_auto-!!-:strip_icc-!!-/2014/01/23/796/n/1922729/fd6c612a638a4608_Fierce-_3_/i/Chair-Pose.jpg",
+  "hold_time" => 10,
+  "effort_level" => 3,
+  })
+
+pose9 = Pose.new({
+  "name" => "Wide-Legged Forward Bend",
+  "image" => "https://media1.popsugar-assets.com/files/thumbor/zf7dRYcxrqs3E8sb4279NSwwEGc/fit-in/1024x1024/filters:format_auto-!!-:strip_icc-!!-/2013/08/30/818/n/1922729/d7cca00f30ffdc23__Wide-Legged-D-2700/i/Wide-Legged-Forward-Bend-C.jpg",
+  "hold_time" => 30,
+  "effort_level" => 4,
+  })
+
 pose1.save
 pose2.save
 pose3.save
 pose4.save
 pose5.save
 pose6.save
+pose7.save
+pose8.save
+pose9.save
 
 sequence1 = Sequence.new({
   "name" => "Routine for tight hamstrings", 

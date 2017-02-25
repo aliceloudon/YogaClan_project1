@@ -1,4 +1,3 @@
-DROP TABLE poses_sequences;
 DROP TABLE sequences;
 DROP TABLE poses;
 

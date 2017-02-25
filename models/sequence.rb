@@ -14,7 +14,7 @@ class Sequence
   end
 
   def save
-    sql = "INSERT INTO sequences (name, total_time, average_effort_level) VALUES ('#{@name}', #{@total_time}, #{@average_effort_level}) RETURNING *;"
+    sql = "INSERT INTO sequences (name, total_time, average_effort_level, pose_id) VALUES ('#{@name}', #{@total_time}, #{@average_effort_level}, #{@pose_id}) RETURNING *;"
     sequence = SqlRunner.run(sql).first
     @id = sequence['id'].to_i
   end
@@ -40,7 +40,8 @@ class Sequence
     sql = "UPDATE sequences SET
       name = '#{@name}',
       total_time = #{@total_time},
-      average_effort_level = #{@average_effort_level}
+      average_effort_level = #{@average_effort_level},
+      pose_id = #{@pose_id}
       WHERE id = #{@id}
       ;"
     SqlRunner.run(sql)

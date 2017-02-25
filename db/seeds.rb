@@ -31,13 +31,29 @@ pose2.save
 pose3.save
 
 sequence1 = Sequence.new({
-  "name" => "Relax", 
+  "name" => "Relaxing Sequence", 
   "total_time" => 60, 
   "average_effort_level" => 5,
   "pose_id" => pose1.id
   })
 
+sequence2 = Sequence.new({
+  "name" => "Routine for tight hamstrings",
+  "total_time" => 20,
+  "average_effort_level" => 4,
+  "pose_id" => pose2.id
+  })
+
+sequence3 = Sequence.new({
+  "name" => "Improve shoulder flexibility",
+  "total_time" => 30,
+  "average_effort_level" => 3,
+  "pose_id" => pose1.id
+  })
+
 sequence1.save
+sequence2.save
+sequence3.save
 
 binding.pry
 nil

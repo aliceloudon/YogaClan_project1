@@ -5,11 +5,11 @@ require_relative('../models/pose.rb')
 
 get '/poses' do
   @poses = Pose.all
-  erb(:index)
+  erb(:"poses/index")
 end
 
 get '/poses/new' do
-  erb(:new)
+  erb(:"poses/new")
 end
 
 post '/poses' do
@@ -20,12 +20,12 @@ end
 
 get '/poses/:id' do
   @pose = Pose.find(params[:id])
-  erb(:show)
+  erb(:"poses/show")
 end
 
 get '/poses/:id/edit' do
   @pose = Pose.find(params[:id])
-  erb(:edit)
+  erb(:"poses/edit")
 end
 
 post '/poses/:id' do

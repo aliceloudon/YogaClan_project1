@@ -1,7 +1,7 @@
 require('sinatra')
 require('sinatra/contrib/all')
 require('pry-byebug')
-require_relative('./models/pose.rb')
+require_relative('../models/pose.rb')
 
 get '/poses' do
   @poses = Pose.all

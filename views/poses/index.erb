@@ -1,0 +1,6 @@
+<% @poses.each do |pose| %>
+
+  <a href="/poses/<%= pose.id %>"><img src = <%= pose.image %> /><a>
+  <p><%= pose.name %></p>
+
+<% end %>

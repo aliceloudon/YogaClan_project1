@@ -8,7 +8,8 @@ get '/sequences' do
   erb(:"sequences/index")
 end
 
-get '/sequences/new' do
+get '/sequences/new' do  
+  @sequences = Sequence.all
   erb(:"sequences/new")
 end
 

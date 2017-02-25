@@ -40,11 +40,19 @@ pose5 = Pose.new({
   "effort_level" => 5,
   })
 
+pose6 = Pose.new({
+  "name" => "Mountain Pose",
+  "image" => "https://media1.popsugar-assets.com/files/thumbor/9R4M6-DABk3vZsHbQSILjvMPQZU/fit-in/1024x1024/filters:format_auto-!!-:strip_icc-!!-/2014/05/13/961/n/1922729/77f240460889d2a3_mountain-pose/i/Mountain-Pose.jpg",
+  "hold_time" => 30,
+  "effort_level" => 1,
+  })
+
 pose1.save
 pose2.save
 pose3.save
 pose4.save
 pose5.save
+pose6.save
 
 sequence1 = Sequence.new({
   "name" => "Routine for tight hamstrings", 

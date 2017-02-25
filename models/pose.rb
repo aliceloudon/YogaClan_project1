@@ -6,7 +6,7 @@ class Pose
   attr_accessor :name, :image, :hold_time, :effort_level
 
   def initialize(options)
-    @id = options['id']
+    @id = nil || options['id'].to_i
     @name = options['name']
     @image = options['image']
     @hold_time = options['hold_time'].to_i
@@ -15,8 +15,8 @@ class Pose
 
   def save
     sql = "INSERT INTO poses (name, image, hold_time, effort_level) VALUES ('#{@name}', '#{@image}', #{@hold_time}, #{@effort_level}) RETURNING *;"
-    pose = SqlRunner.run(sql).first
-    @id = pose['id'].to_i
+    result = SqlRunner.run(sql).first
+    @id = result['id'].to_i
   end
 
   def self.delete_all
@@ -31,8 +31,8 @@ class Pose
 
   def self.find(id)
     sql = "SELECT * FROM poses WHERE id = #{id}"
-    pose = SqlRunner.run(sql)
-    result = Pose.new(pose.first)
+    results = SqlRunner.run(sql)
+    result = Pose.new(results.first)
     return result
   end
 

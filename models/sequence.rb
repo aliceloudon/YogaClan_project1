@@ -6,7 +6,7 @@ class Sequence
   attr_accessor :name, :total_time, :average_effort_level, :pose_id_1, :pose_id_2
 
   def initialize(options)
-    @id = options['id']
+    @id = nil || options['id'].to_i
     @name = options['name']
     @total_time = options['total_time'].to_i
     @average_effort_level = options['average_effort_level'].to_i
@@ -16,8 +16,8 @@ class Sequence
 
   def save
     sql = "INSERT INTO sequences (name, total_time, average_effort_level, pose_id_1, pose_id_2) VALUES ('#{@name}', #{@total_time}, #{@average_effort_level}, #{@pose_id_1}, #{@pose_id_2}) RETURNING *;"
-    sequence = SqlRunner.run(sql).first
-    @id = sequence['id'].to_i
+    results = SqlRunner.run(sql).first
+    @id = results['id'].to_i
   end
 
   def self.delete_all

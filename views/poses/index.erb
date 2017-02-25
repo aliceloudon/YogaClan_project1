@@ -1,6 +1,14 @@
-<% @poses.each do |pose| %>
+<div class="grid">
+<div class="grid-row">
 
-  <a href="/poses/<%= pose.id %>"><img src = <%= pose.image %> /><a>
-  <p><%= pose.name %></p>
+  <% @poses.each do |pose| %>
+    <div class="cell">
 
-<% end %>
+      <a href="/poses/<%= pose.id %>"><img src = <%= pose.image %> /><a>
+      <p><%= pose.name %></p>
+
+    </div>
+  <% end %>
+
+</div>
+</div>

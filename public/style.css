@@ -1,9 +1,29 @@
 nav li {
   display: inline;
+  text-decoration: none;
 }
 
 img {
   display: block;
   width: 20%;
   height: 20%;
+}
+
+.grid {
+  display: flex;
+}
+
+.grid-row {
+  flex-direction: row;
+}
+
+.cell {
+  flex: 1;
+  padding: 10px;
+  margin: 4px;
+  border: 1px solid black;
+  display: inline-block;
+  background-color: #f7e3a0;
+  size: 100%;
+  justify-content: space-around;
 }

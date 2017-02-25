@@ -8,37 +8,27 @@
     </li>
 
     <li>
-      <label for="total_time"> Total Time: </label>
-      <input type="total_time" name="total_time" id="total_time"/>
+    <label for="pose_id_1">Pose:</label>
+    <select id="pose_id_1" name="pose_id_1">
+      <% poses = Pose.all %>
+      <% poses.each do |pose| %>
+        <option value = "<%= pose.id %>"><%= pose.name %></option>
+      <% end %>
+    </select>
     </li>
 
     <li>
-      <label for="average_effort_level"> Average Effort Level: </label>
-      <input type="average_effort_level" name="average_effort_level" id="average_effort_level"/>
+    <label for="pose_id_2">Pose:</label>
+    <select id="pose_id_2" name="pose_id_2">
+      <% poses = Pose.all %>
+      <% poses.each do |pose| %>
+        <option value = "<%= pose.id %>"><%= pose.name %></option>
+      <% end %>
+    </select>
     </li>
 
     <li>
-      <label for="pose_id_1"> Pose 1: </label>
-      <select id="pose_id" name="pose_id_1">
-        <% poses = Pose.all %>
-        <% poses.each do |pose| %>
-          <option value = "<% pose.id %>"><%= pose.name %></option>
-        <% end %>  
-      </select>
-    </li>
-
-    <li>
-      <label for="pose_id_2"> Pose 2: </label>
-      <select id="pose_id_2" name="pose_id_2">
-        <% poses = Pose.all %>
-        <% poses.each do |pose| %>
-          <option value = "<% pose.id %>"><%= pose.name %></option>
-        <% end %>  
-      </select>
-    </li>
-
-    <li>
-      <input type="submit" name="save"/>
+      <input type="submit" value="Save"/>
     </li>
 
   </ul>

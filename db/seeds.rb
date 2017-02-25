@@ -33,7 +33,8 @@ pose3.save
 sequence1 = Sequence.new({
   "name" => "Relax", 
   "total_time" => 60, 
-  "average_effort_level" => 5
+  "average_effort_level" => 5,
+  "pose_id" => pose1.id
   })
 
 sequence1.save

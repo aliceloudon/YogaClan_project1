@@ -9,8 +9,8 @@ class Pose
     @id = options['id']
     @name = options['name']
     @image = options['image']
-    @hold_time = options['hold_time']
-    @effort_level = options['effort_level']
+    @hold_time = options['hold_time'].to_i
+    @effort_level = options['effort_level'].to_i
   end
 
   def save

@@ -2,14 +2,15 @@ require_relative('../db/sql_runner.rb')
 
 class Sequence
 
-  attr_reader :id
+  attr_reader :id, :pose_id
   attr_accessor :name, :total_time, :average_effort_level
 
   def initialize(options)
     @id = options['id']
     @name = options['name']
-    @total_time = options['total_time']
-    @average_effort_level = options['average_effort_level']
+    @total_time = options['total_time'].to_i
+    @average_effort_level = options['average_effort_level'].to_i
+    @pose_id = options['pose_id'].to_i
   end
 
   def save

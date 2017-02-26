@@ -63,9 +63,21 @@ join3 = Join.new({
   'sequence_id' => sequence3.id
 })
 
+join4 = Join.new({
+  'pose_id' => pose2.id,
+  'sequence_id' => sequence1.id
+})
+
+join5 = Join.new({
+  'pose_id' => pose3.id,
+  'sequence_id' => sequence1.id
+})
+
 join1.save
 join2.save
 join3.save
+join4.save
+join5.save
 
 binding.pry
 nil

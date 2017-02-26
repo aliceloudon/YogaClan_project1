@@ -11,6 +11,8 @@ end
 
 get '/sequences/new' do  
   @sequences = Sequence.all
+  @joins = Join.all
+  @poses = Pose.all
   erb(:"sequences/new")
 end
 

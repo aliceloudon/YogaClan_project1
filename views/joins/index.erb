@@ -3,7 +3,3 @@
   <p>Pose name: <%= join.pose.name %></p>
   <hr>
 <% end %>
-
-<% @joins.each do |join| %>
-  <p> Pose name: <%= join.pose.name if join.sequence.name == "Back Strength" %>
-<% end %>

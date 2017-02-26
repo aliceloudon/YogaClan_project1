@@ -3,6 +3,7 @@ require('sinatra/contrib/all')
 require('pry-byebug')
 require_relative('../models/sequence.rb')
 require_relative('../models/join.rb')
+require_relative('../models/pose.rb')
 
 get '/sequences' do
   @sequences = Sequence.all

@@ -34,6 +34,11 @@ class Join
     return result
   end
 
+  def delete
+    sql = "DELETE FROM joins WHERE id = #{@id}"
+    SqlRunner.run(sql)
+  end
+
   def pose
     sql = "SELECT * FROM poses p
           INNER JOIN joins j

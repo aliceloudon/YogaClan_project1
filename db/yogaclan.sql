@@ -12,10 +12,7 @@ CREATE TABLE poses (
 
 CREATE TABLE sequences (
   id SERIAL4 PRIMARY KEY,
-  name VARCHAR(255),
-  total_time INT4,
-  average_effort_level INT4,
-  number_of_poses INT4
+  name VARCHAR(255)
 );
 
 CREATE TABLE joins (

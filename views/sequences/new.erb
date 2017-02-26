@@ -7,15 +7,6 @@
       <input type="text" name="name" id="name"/>
     </li>
 
-    <li> Select a pose:
-      <label>
-        <select name="pose_id">
-          <% for pose in @poses %>
-          <option value="<%= pose.id %>"><%= pose.name %></option>
-          <% end %>
-      </label>
-    </li>
-
     <li>
       <input type="submit" value="Save"/>
     </li>

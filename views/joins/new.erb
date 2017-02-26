@@ -1,0 +1,29 @@
+<form action="/joins" method="post">
+  <p>
+  Select a pose:
+  </p>
+  <p>
+    <label>
+      <select name="pose_id">
+        <% for pose in @poses %>
+        <option value="<%= pose.id %>"><%= pose.name %></option>
+        <% end %>
+      </select>
+    </label>
+  </p>
+
+  <p>
+    Select a sequence:
+  </p>
+  <p>
+    <label>
+      <select name="sequence_id">
+        <% for sequence in @sequences %>
+        <option value="<%= sequence.id %>"><%= sequence.name %></option>
+        <% end %>
+      </select>
+    </label>
+  </p>
+
+  <input type='submit' value="Save">
+</form>

@@ -1,20 +1,20 @@
   <p> Sequence Name: <%= @sequence.name %> </p>
 
   <p> Total Time: 
-      <% @joins.each do |join| %>
-        <%= join.pose.hold_time if join.sequence.id == @sequence.id %>
-      <% end %>
+    <% @joins.each do |join| %>
+      <%= join.pose.hold_time if join.sequence_id == @sequence.id %>
+    <% end %>
   </p>
 
-  <p> Average Effort Level:
+  <p> Average Effort Required:
       <% @joins.each do |join| %>
-        <%= join.pose.effort_level if join.sequence.id == @sequence.id %>
+        <%= join.pose.effort_level if join.sequence_id == @sequence.id %>
       <% end %>
   </p>
 
   <p> Poses:
       <% @joins.each do |join| %>
-        <%= join.pose.name if join.sequence.id == @sequence.id %>
+        <%= join.pose.name if join.sequence_id == @sequence.id %>
       <% end %>
   </p>
 

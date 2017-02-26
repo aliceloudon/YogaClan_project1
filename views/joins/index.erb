@@ -1,5 +1,8 @@
 <% @joins.each do |join| %>
   <p>Sequence name: <%= join.sequence.name %></p>
   <p>Pose name: <%= join.pose.name %></p>
+  <a href="/joins/<%= join.id %>">Show Join</a>
   <hr>
 <% end %>
+
+<a href="/joins/new">ADD NEW JOIN</a>

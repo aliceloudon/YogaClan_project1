@@ -27,6 +27,24 @@ class Join
     return self.map_items(sql)
   end
 
+  def pose
+    sql = "SELECT * FROM poses p
+          INNER JOIN joins j
+          ON j.pose_id = p.id
+          WHERE p.id = #{@pose_id}"
+    results = SqlRunner.run(sql)
+    return Pose.new(results.first)
+  end
+
+  def sequence
+    sql = "SELECT * FROM sequences s
+          INNER JOIN joins j
+          ON j.sequence_id = s.id
+          WHERE s.id = #{@sequence_id}"
+    results = SqlRunner.run(sql)
+    return Sequence.new(results.first)
+  end
+
   #Helper methods for mapping
   def self.map_items(sql)
     joins = SqlRunner.run(sql)

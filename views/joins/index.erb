@@ -1,0 +1,4 @@
+<% @joins.each do |join| %>
+    <p><%= join.pose_id %> <%= join.sequence_id %></p>
+    <p><%= join.pose_id[":name"] %> <%= join.sequence_id %></p>
+<% end %>

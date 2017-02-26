@@ -1,13 +1,6 @@
-
-<% pose_1 = Pose.find(@sequence.pose_id_1) %>
-<% pose_2 = Pose.find(@sequence.pose_id_2) %>
-
   <p> Sequence Name: <%= @sequence.name %> </p>
-  <p> Total Time: <%= pose_1.hold_time + pose_2.hold_time %> seconds </p>
-  <p> Average Effort Level: <%= (pose_1.effort_level+pose_2.effort_level)/2 %> </p>
-  <p> Poses: <%= pose_1.name %>, <%= pose_2.name %> </p>
-  <p><img src = <%= pose_1.image %> /></p>
-  <p><img src = <%= pose_2.image %> /></p>
+  <p> Total Time: <%= @sequence.total_time %> seconds </p>
+  <p> Average Effort Level: <%= @sequence.average_effort_level %> </p>
 
 <a href="/sequences/<%= @sequence.id %>/edit">Edit Sequence</a>
 

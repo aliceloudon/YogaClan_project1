@@ -1,3 +1,4 @@
+DROP TABLE joins;
 DROP TABLE sequences;
 DROP TABLE poses;
 
@@ -14,6 +15,11 @@ CREATE TABLE sequences (
   name VARCHAR(255),
   total_time INT4,
   average_effort_level INT4,
-  pose_id_1 INT4 REFERENCES poses(id),
-  pose_id_2 INT4 REFERENCES poses(id)
+  number_of_poses INT4
+);
+
+CREATE TABLE joins (
+  id SERIAL4 PRIMARY KEY,
+  pose_id INT4,
+  sequence_id INT4
 );

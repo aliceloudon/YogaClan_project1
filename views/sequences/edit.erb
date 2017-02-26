@@ -8,28 +8,6 @@
     </li>
 
     <li>
-    <label for="pose_id_1"> Pose 1: </label>
-    <select id="pose_id_1" name="pose_id_1">
-      <% poses = Pose.all %>
-      <% poses.each do |pose| %>
-        <option <%= "selected" if pose.id == pose.name %> 
-        value = "<%= pose.id %>"><%= pose.name %></option>
-      <% end %>
-    </select>
-    </li>
-
-    <li>
-    <label for="pose_id_2"> Pose 2: </label>
-    <select id="pose_id_2" name="pose_id_2">
-      <% poses = Pose.all %>
-      <% poses.each do |pose| %>
-        <option <%= "selected" if pose.id == pose.name %> 
-        value = "<%= pose.id %>"><%= pose.name %></option>
-      <% end %>
-    </select>
-    </li>
-
-    <li>
       <input type="submit" value="Save"/>
     </li>
 

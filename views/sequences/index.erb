@@ -3,11 +3,12 @@
 
 <% @sequences.each do |sequence| %>
   <div class="cell">
-    <% pose_1 = Pose.find(sequence.pose_id_1) %>
-    <a href="/sequences/<%= sequence.id %>"><img src = <%= pose_1.image %> /></a>
     <p><%= sequence.name %></p>
+    <a href="/sequences/<%= sequence.id %>">Show Sequence</a>
   </div>
 <% end %>
 
 </div>
 </div>
+
+<a href="/sequences/new">ADD NEW SEQUENCE</a>

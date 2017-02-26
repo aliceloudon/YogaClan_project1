@@ -27,6 +27,13 @@ class Join
     return self.map_items(sql)
   end
 
+  def self.find(id)
+    sql = "SELECT * FROM joins WHERE id = #{id}"
+    results = SqlRunner.run(sql)
+    result = Join.new(results.first)
+    return result
+  end
+
   def pose
     sql = "SELECT * FROM poses p
           INNER JOIN joins j

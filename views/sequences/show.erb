@@ -1,8 +1,14 @@
   <p> Sequence Name: <%= @sequence.name %> </p>
   <p> Total Time: <%= @sequence.total_time %> seconds </p>
   <p> Average Effort Level: <%= @sequence.average_effort_level %> </p>
+  <p> Poses: </p>
 
-<a href="/sequences/<%= @sequence.id %>/edit">Edit Sequence</a>
+  <% @joins.each do |join| %>
+    <p><%= join.pose.name if join.sequence.id == @sequence.id %>
+  <% end %>
+
+
+<p><a href="/sequences/<%= @sequence.id %>/edit">Edit Sequence</a></p>
 
 <form method="POST" action="/sequences/<%= @sequence.id %>/delete">
   <input type="submit" value="Delete Sequence"/>  

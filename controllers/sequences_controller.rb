@@ -2,6 +2,7 @@ require('sinatra')
 require('sinatra/contrib/all')
 require('pry-byebug')
 require_relative('../models/sequence.rb')
+require_relative('../models/join.rb')
 
 get '/sequences' do
   @sequences = Sequence.all
@@ -21,6 +22,7 @@ end
 
 get '/sequences/:id' do
   @sequence = Sequence.find(params[:id])
+  @joins = Join.all
   erb(:"sequences/show")
 end
 

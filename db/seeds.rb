@@ -33,15 +33,15 @@ pose2.save
 pose3.save
 
 sequence1 = Sequence.new({
-  "name" => "Routine for tight hamstrings"
+  "name" => "Hamstrings"
   })
 
 sequence2 = Sequence.new({
-  "name" => "Shoulder Flexibility"
+  "name" => "Shoulders"
   })
 
 sequence3 = Sequence.new({
-  "name" => "Back Strength"
+  "name" => "Back"
   })
 
 sequence1.save
@@ -49,18 +49,18 @@ sequence2.save
 sequence3.save
 
 join1 = Join.new({
-  'pose_id' => pose2.id,
-  'sequence_id' => sequence3.id
+  'pose_id' => pose1.id,
+  'sequence_id' => sequence1.id
 })
 
 join2 = Join.new({
-  'pose_id' => pose3.id,
-  'sequence_id' => sequence3.id
+  'pose_id' => pose2.id,
+  'sequence_id' => sequence2.id
 })
 
 join3 = Join.new({
-  'pose_id' => pose1.id,
-  'sequence_id' => sequence2.id
+  'pose_id' => pose3.id,
+  'sequence_id' => sequence3.id
 })
 
 join1.save

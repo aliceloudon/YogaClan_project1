@@ -1,4 +1,9 @@
 <% @joins.each do |join| %>
-    <p><%= join.pose_id %> <%= join.sequence_id %></p>
-    <p><%= join.pose.name %> <%= join.sequence.name %></p>
+  <p>Sequence name: <%= join.sequence.name %></p>
+  <p>Pose name: <%= join.pose.name %></p>
+  <hr>
+<% end %>
+
+<% @joins.each do |join| %>
+  <p> Pose name: <%= join.pose.name if join.sequence.name == "Back Strength" %>
 <% end %>

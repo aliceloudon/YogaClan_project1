@@ -46,6 +46,18 @@ class Sequence
     SqlRunner.run(sql)
   end
 
+  def poses
+    sql = "SELECT p.* FROM poses p
+          INNER JOIN joins j ON j.pose_id = p.id
+          WHERE j.sequence_id = #{@id}"
+    poses = SqlRunner.run(sql)
+    # this gives me back an array of hashes
+    result = poses.map { |pose| Pose.new(pose)}
+    # map each hash to a new pose
+    return result
+    # get all the poses for this sequence @id
+  end
+
   #Helper methods for mapping
   def self.map_items(sql)
     sequences = SqlRunner.run(sql)

@@ -6,7 +6,7 @@ class Pose
   attr_accessor :name, :image, :hold_time, :effort_level
 
   def initialize(options)
-    @id = nil || options['id'].to_i
+    @id = options['id'].to_i
     @name = options['name']
     @image = options['image']
     @hold_time = options['hold_time'].to_i

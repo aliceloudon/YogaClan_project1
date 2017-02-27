@@ -25,7 +25,7 @@ end
 
 get '/sequences/:id' do
   @sequence = Sequence.find(params[:id])
-  @joins = Join.all
+  @poses = @sequence.poses
   erb(:"sequences/show")
 end
 

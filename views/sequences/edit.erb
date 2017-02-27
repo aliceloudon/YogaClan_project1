@@ -1,15 +1,12 @@
 <form method="POST" action="/sequences/<%= @sequence.id %>">
 
-  <ul>
+  <p>
+    <label for="name"> Sequence Name: </label>
+    <input value = "<%= @sequence.name %>" type="text" name="name" id="name"/>
+  </p>
 
-    <li>
-      <label for="name"> Sequence Name: </label>
-      <input value = "<%= @sequence.name %>" type="text" name="name" id="name"/>
-    </li>
+  <p>
+    <input type="submit" value="Save"/>
+  </p>
 
-    <li>
-      <input type="submit" value="Save"/>
-    </li>
-
-  </ul>
 </form>

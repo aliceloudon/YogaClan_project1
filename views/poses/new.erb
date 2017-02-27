@@ -1,43 +1,40 @@
 <form method="POST" action="/poses">
 
-  <ul>
+  <p>
+    <label for="name"> Pose Name: </label>
+    <input type="text" name="name" id="name"/>
+  </p>
 
-    <li>
-      <label for="name"> Pose Name: </label>
-      <input type="text" name="name" id="name"/>
-    </li>
+  <p>
+    <label for="image"> Image (enter URL): </label>
+    <input type="text" name="image" id="image"/>
+  </p>
 
-    <li>
-      <label for="image"> Image (enter URL): </label>
-      <input type="text" name="image" id="image"/>
-    </li>
+  <p>
+    <label for="hold_time"> Hold Time (in seconds): </label>
+    <select id="hold_time" name="hold_time">
+      <option value=10> 10 </option>
+      <option value=20> 20 </option>
+      <option value=30> 30 </option>
+      <option value=40> 40 </option>
+      <option value=50> 50 </option>
+      <option value=60> 60 </option>
+    </select>
+  </p>
 
-    <li>
-      <label for="hold_time"> Hold Time (in seconds): </label>
-      <select id="hold_time" name="hold_time">
-        <option value=10> 10 </option>
-        <option value=20> 20 </option>
-        <option value=30> 30 </option>
-        <option value=40> 40 </option>
-        <option value=50> 50 </option>
-        <option value=60> 60 </option>
-      </select>
-    </li>
+  <p>
+    <label for="effort_level"> Effort Level: </label>
+    <select id="effort_level" name="effort_level">
+      <option value=1> 1 </option>
+      <option value=2> 2 </option>
+      <option value=3> 3 </option>
+      <option value=4> 4 </option>
+      <option value=5> 5 </option>
+    </select>
+  </p>
 
-    <li>
-      <label for="effort_level"> Effort Level: </label>
-      <select id="effort_level" name="effort_level">
-        <option value=1> 1 </option>
-        <option value=2> 2 </option>
-        <option value=3> 3 </option>
-        <option value=4> 4 </option>
-        <option value=5> 5 </option>
-      </select>
-    </li>
+  <p>
+    <input type="submit" value="Save"/>
+  </p>
 
-    <li>
-      <input type="submit" value="Save"/>
-    </li>
-
-  </ul>
 </form>

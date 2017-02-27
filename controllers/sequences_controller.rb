@@ -12,14 +12,21 @@ end
 
 get '/sequences/new' do  
   @sequences = Sequence.all
-  @joins = Join.all
   @poses = Pose.all
   erb(:"sequences/new")
 end
 
 post '/sequences' do
-  @sequence = Sequence.new(params)
-  @sequence.save
+  sequence = Sequence.new(params)
+  sequence.save
+
+  for key, value in params
+    if key.include? "pose_id"
+      join = Join.new({"pose_id" => value, "sequence_id" => sequence.id})
+      join.save    
+    end
+  end
+
   redirect to '/sequences'
 end
 

@@ -1,4 +1,5 @@
 require_relative('../db/sql_runner.rb')
+require_relative('../models/sequence.rb')
 
 class Join
 
@@ -6,7 +7,7 @@ class Join
   attr_accessor :pose_id, :sequence_id
 
   def initialize(options)
-    @id = nil || options['id'].to_i
+    @id = options['id'].to_i
     @pose_id = options['pose_id'].to_i
     @sequence_id = options['sequence_id'].to_i
   end

@@ -45,13 +45,13 @@ end
 post '/sequences/:id' do
   sequence = Sequence.new(params)
   sequence.update
-
-  for key, value in params
-    if key.include? "pose_id"
-      join = Join.new({"pose_id" => value, "sequence_id" => sequence.id})
-      join.save    
+  sequence.delete_joins
+    for key, value in params
+      if key.include? "pose_id"
+        join = Join.new({"pose_id" => value, "sequence_id" => sequence.id})
+        join.save    
+      end
     end
-  end
 
   redirect to "/sequences/#{sequence.id}"
 end

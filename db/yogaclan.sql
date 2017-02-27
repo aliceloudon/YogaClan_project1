@@ -17,6 +17,6 @@ CREATE TABLE sequences (
 
 CREATE TABLE joins (
   id SERIAL4 PRIMARY KEY,
-  pose_id INT4,
-  sequence_id INT4
+  pose_id INT4 references poses(id),
+  sequence_id INT4 references sequences(id)
 );

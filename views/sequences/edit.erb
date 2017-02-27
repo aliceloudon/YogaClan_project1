@@ -12,7 +12,13 @@
     <% for pose in @poses %>
       <p>
 
-      <input type="checkbox" name="pose_id<%= pose.id %>" id="pose_id<%= pose.id %>" value="<%= pose.id %>" />
+      <input
+      type="checkbox"
+      name="pose_id<%= pose.id %>"
+      id="pose_id<%= pose.id %>"
+      value="<%= pose.id %>" 
+      <%= "checked" if @sequence.contains?(pose.id) %>
+      />
       <label for="pose_id<%= pose.id %>">
       <%= pose.name %>
       </label>

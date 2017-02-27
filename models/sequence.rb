@@ -46,6 +46,11 @@ class Sequence
     SqlRunner.run(sql)
   end
 
+  def delete_joins
+    sql = "DELETE FROM joins WHERE sequence_id = #{@id}"
+    SqlRunner.run(sql)
+  end
+
   def poses
     sql = "SELECT p.* FROM poses p
           INNER JOIN joins j ON j.pose_id = p.id
@@ -56,6 +61,13 @@ class Sequence
     # map each hash to a new pose
     return result
     # get all the poses for this sequence @id
+  end
+
+  def contains?(pose_id)
+    for pose in poses()
+      return true if pose.id == pose_id
+    end
+    return false
   end
 
   #Helper methods for mapping

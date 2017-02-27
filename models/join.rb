@@ -42,8 +42,8 @@ class Join
 
   def update
     sql = "UPDATE joins SET
-      pose_id = '#{@pose_id}'
-      sequence_id = '#{@sequence_id}'
+      pose_id = #{@pose_id}
+      sequence_id = #{@sequence_id}
       WHERE id = #{@id}
       ;"
     SqlRunner.run(sql)

@@ -40,6 +40,15 @@ class Join
     SqlRunner.run(sql)
   end
 
+  def update
+    sql = "UPDATE joins SET
+      pose_id = '#{@pose_id}'
+      sequence_id = '#{@sequence_id}'
+      WHERE id = #{@id}
+      ;"
+    SqlRunner.run(sql)
+  end
+
   def pose
     sql = "SELECT * FROM poses p
           INNER JOIN joins j

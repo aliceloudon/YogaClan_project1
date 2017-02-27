@@ -6,6 +6,21 @@
   </p>
 
   <p>
+    Poses in the sequence:
+  </p>
+
+    <% for pose in @poses %>
+      <p>
+
+      <input type="checkbox" name="pose_id<%= pose.id %>" id="pose_id<%= pose.id %>" value="<%= pose.id %>" />
+      <label for="pose_id<%= pose.id %>">
+      <%= pose.name %>
+      </label>
+
+      </p>
+    <% end %>
+
+  <p>
     <input type="submit" value="Save"/>
   </p>
 

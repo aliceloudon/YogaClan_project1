@@ -38,12 +38,21 @@ end
 
 get '/sequences/:id/edit' do
   @sequence = Sequence.find(params[:id])
+  @poses = Pose.all
   erb(:"sequences/edit")
 end
 
 post '/sequences/:id' do
   sequence = Sequence.new(params)
   sequence.update
+
+  for key, value in params
+    if key.include? "pose_id"
+      join = Join.new({"pose_id" => value, "sequence_id" => sequence.id})
+      join.save    
+    end
+  end
+
   redirect to "/sequences/#{sequence.id}"
 end
 

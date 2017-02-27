@@ -1,14 +1,5 @@
-<div class = "grid">
-<div class = "grid-row">
-
 <% @sequences.each do |sequence| %>
-  <div class="cell">
-    <p><%= sequence.name %></p>
-    <a href="/sequences/<%= sequence.id %>">Show Sequence</a>
-  </div>
+  <p><a href="/sequences/<%= sequence.id %>"><%= sequence.name %></a></p>
 <% end %>
-
-</div>
-</div>
 
 <a href="/sequences/new">ADD NEW SEQUENCE</a>

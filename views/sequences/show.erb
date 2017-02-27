@@ -18,6 +18,12 @@
   <% end %>
 </p>
 
+<p> 
+  <% @poses.each do |pose| %>
+    <img src = <%= pose.image %> />
+  <% end %>
+</p>
+
 <p><a href="/sequences/<%= @sequence.id %>/edit">Edit Sequence</a></p>
 
 <form method="POST" action="/sequences/<%= @sequence.id %>/delete">

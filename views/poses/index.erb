@@ -1,14 +1,14 @@
-<div class="div-row">
+<div>
 
-<% @poses.each do |pose| %>
-  <div class="cell">
-    <a href="/poses/<%= pose.id %>"><img src = <%= pose.image %> /><p><%= pose.name %></p></a>
-  </div>  
-<% end %>
+  <% @poses.each do |pose| %>
+    <div class="cell">
+      <a href="/poses/<%= pose.id %>"><img src = <%= pose.image %> class="pose_image_small"/><p><%= pose.name %></p></a>
+    </div>  
+  <% end %>
 
-  <div class="cell">
-    <a href="/poses/new"><img src="http://www.charbase.com/images/glyph/65122"/><p>ADD NEW POSE</p></a>
-  </div>
+    <div class="cell">
+      <a href="/poses/new"><img src="http://www.charbase.com/images/glyph/65122"/><p>ADD NEW POSE</p></a>
+    </div>
 
 </div>
 

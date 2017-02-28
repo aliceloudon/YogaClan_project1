@@ -143,6 +143,14 @@ pose17 = Pose.new({
   })
 pose17.save
 
+pose18 = Pose.new({
+  "name" => "Handstand",
+  "image" => "https://media1.popsugar-assets.com/files/thumbor/RZ3ku7ye2hOLYPfBzsT45GQfabY/fit-in/1024x1024/filters:format_auto-!!-:strip_icc-!!-/2014/12/15/700/n/1922729/35c2f123aca7d048_Handstand-Purple/i/Handstand.jpg",
+  "hold_time" => 10,
+  "effort_level" => 5,
+  })
+pose18.save
+
 
 sequence1 = Sequence.new({
   "name" => "Relaxing Sequence"

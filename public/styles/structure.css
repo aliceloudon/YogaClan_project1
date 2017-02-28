@@ -59,6 +59,79 @@ nav li a:hover {
   margin: 10px;
 }
 
+.cell_sequence p {
+    display: block;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+/* Below is design for the 'View Pose' page */
+
+.pose_detail {
+  display: flex;
+  width: 800px;
+  height: 500px;
+  margin: 0 auto;
+  padding: 60px;
+}
+
+.pose_detail_image {
+  display: inline-block;
+}
+
+.pose_detail_text {
+  display: inline-block;
+  padding: 30px;
+}
+
+.pose_detail_text p {
+  font-size: 0.9em;
+  font-family: Verdana;
+  color: #474a4f;
+}
+
+.pose_detail_text_buttons {
+  display: inline-block;
+  size: 10px, 10px;
+  border: solid 1px #8f98a8;
+}
+
+/* Below is design for the 'View Sequence' page */
+
+.sequence_detail {
+  display: block;
+  height: 500px;
+  margin: 0 auto;
+  padding: 60px;
+}
+
+.sequence_detail_text {
+  display: inline-block
+}
+
+.sequence_detail p {
+  font-size: 0.9em;
+  font-family: Verdana;
+  color: #474a4f;
+}
+
+/* Below is design for Homepage*/
+
+.homepage_image {
+  max-width: 100%;
+  height: 650px;
+}
+
+.homepage_buttons {
+    position: absolute;
+    display: block;
+    width: 200px;
+    height: 100px;
+    margin: auto;
+}
+
+/* Below is generic design that should apply to all */
+
 a {
   font-size: 0.75em;
   font-family: Verdana;
@@ -67,7 +140,24 @@ a {
   color: #474a4f;
 }
 
-img {
+.pose_image_small {
   width: 200px;
   height: 200px;
+}
+
+.pose_image_medium {
+  width: 400px;
+  height: 400px;
+}
+
+.pose_image_large {
+  width: 600px;
+  height: 600px;
+}
+
+.button {
+  display: inline-block;
+  padding: 20px;
+  border: solid 1px #8f98a8;
+  margin: 5px;
 }

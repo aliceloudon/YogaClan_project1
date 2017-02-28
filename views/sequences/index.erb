@@ -1,13 +1,9 @@
-<div class="div-row">
+<div>
 
 <% @sequences.each do |sequence| %>
-  <div class="cell_sequence">
-    <p><a href="/sequences/<%= sequence.id %>"><%= sequence.name %></a></p>
-  </div>
+  <p><a href="/sequences/<%= sequence.id %>"><%= sequence.name %></a></p>
 <% end %>
 
-  <div class="cell_sequence">
-    <a href="/sequences/new"><img src="http://www.charbase.com/images/glyph/65122"/><p>ADD NEW SEQUENCE</p></a>
-  </div>
+<a href="/sequences/new"><p>ADD NEW SEQUENCE</p></a>
 
 </div>

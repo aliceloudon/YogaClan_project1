@@ -1,24 +1,36 @@
-<p> Sequence Name: <%= @sequence.name %> </p>
+<div class="sequence_detail">
 
-<p> Poses in Sequence: </p>
-  <% @poses.each do |pose| %>
-    <img src = <%= pose.image %> />
-    <p><%= pose.name %></p>
-  <% end %>
+  <div class="sequence_detail_text">
+    <p> Sequence Name: <%= @sequence.name %> </p>
 
-<p> Total Time: 
-  <%= amount = @poses.inject(0) {|sum, value| sum + value.hold_time} %>
-</p>
-<!-- OR should I loop through the poses and add the value of hold_time to a counter? -->
+    <p> Total Time: 
+      <%= amount = @poses.inject(0) {|sum, value| sum + value.hold_time} %>
+    </p>
+    <!-- OR should I loop through the poses and add the value of hold_time to a counter? -->
 
-<p> Average Effort Level:
-  <% total_effort_level = @poses.inject(0) {|sum, value| sum + value.effort_level} %>
-  <% average_effort_level = total_effort_level/@poses.count.to_f %>
-  <%= average_effort_level.round(1) %>
-</p>
+    <p> Average Effort Level:
+      <% total_effort_level = @poses.inject(0) {|sum, value| sum + value.effort_level} %>
+      <% average_effort_level = total_effort_level/@poses.count.to_f %>
+      <%= average_effort_level.round(1) %>
+    </p>
+    </div>
+    
+    <p> Poses in Sequence: </p>
 
-<p><a href="/sequences/<%= @sequence.id %>/edit">Edit Sequence</a></p>
 
-<form method="POST" action="/sequences/<%= @sequence.id %>/delete">
-  <input type="submit" value="Delete Sequence"/>  
-</form>
+    <% @poses.each do |pose| %>
+        <img src = <%= pose.image %> class="pose_image_large"/>
+        <p><%= pose.name %></p>
+    <% end %>
+
+    <div class="button">
+      <p><a href="/sequences/<%= @sequence.id %>/edit">Edit Sequence</a></p>
+    </div>
+
+    <div class="button">
+      <form method="POST" action="/sequences/<%= @sequence.id %>/delete">
+        <input type="submit" value="Delete Sequence"/>  
+      </form>
+    </div>
+
+</div>

@@ -1,26 +1,28 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>YogaClan</title>
-  <link rel="stylesheet" type="text/css" href="/style.css">
-</head>
-<body>
 
-  <nav>
-    <ul>
-      <li>
-        <a href="/">YOGACLAN</a>
-      </li>
-      <li>
-        <a href="/poses">POSES</a>
-      </li>
-      <li>
-        <a href="/sequences">SEQUENCES</a>
-      </li>
-    </ul>
-  </nav>
+  <head>
+    <title>YogaClan</title>
+    <link rel="stylesheet" type="text/css" href="/styles/structure.css">
+    <link rel="stylesheet" type="text/css" href="/styles/buttons.css">
+    <link rel="stylesheet" type="text/css" href="/styles/forms.css">
+    <link rel="stylesheet" type="text/css" href="/styles/tables.css">
+  </head>
 
-  <%= yield %>
+  <body>
 
-</body>
+    <nav>
+      <ul>
+        <li><a href="/">YOGACLAN</a></li>
+        <li><a href="/poses">POSES</a></li>
+        <li><a href="/sequences">SEQUENCES</a></li>
+      </ul>
+    </nav>
+
+    <div class="Grid">
+      <%= yield %> 
+    </div>
+
+  </body>
+
 </html>

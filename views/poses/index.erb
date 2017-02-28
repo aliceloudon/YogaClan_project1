@@ -1,14 +1,15 @@
-<div class = "grid">
-<div class = "grid-row">
+<div class="div-row">
 
 <% @poses.each do |pose| %>
   <div class="cell">
-    <a href="/poses/<%= pose.id %>"><img src = <%= pose.image %> /></a>
-    <p><%= pose.name %></p>
-  </div>
+    <a href="/poses/<%= pose.id %>"><img src = <%= pose.image %> /><p><%= pose.name %></p></a>
+  </div>  
 <% end %>
 
-</div>
+  <div class="cell">
+    <a href="/poses/new"><img src="http://www.charbase.com/images/glyph/65122"/><p>ADD NEW POSE</p></a>
+  </div>
+
 </div>
 
-<a href="/poses/new">ADD NEW POSE</a>
+

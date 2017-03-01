@@ -33,6 +33,7 @@ end
 get '/sequences/:id' do
   @sequence = Sequence.find(params[:id])
   @poses = @sequence.poses
+  @sequence.add_time(@sequence.poses)
   erb(:"sequences/show")
 end
 

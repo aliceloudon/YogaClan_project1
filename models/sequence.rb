@@ -3,11 +3,12 @@ require_relative('../db/sql_runner.rb')
 class Sequence
 
   attr_reader :id
-  attr_accessor :name
+  attr_accessor :name, :total_time
 
   def initialize(options)
     @id = options['id'].to_i
     @name = options['name']
+    @total_time = nil
   end
 
   def save
@@ -61,6 +62,29 @@ class Sequence
     # map each hash to a new pose
     return result
     # get all the poses for this sequence @id
+  end
+
+  def add_time(poses)
+    amount = poses.inject(0) {|sum, value| sum + value.time}
+    @total_time = amount
+  end
+
+  def average_effort
+    effort = poses.inject(0) {|sum, value| sum + value.effort_level}
+    average_effort = effort/poses.count.to_f
+    return average_effort.round(1)
+  end
+
+  def format_time()
+    seconds = @total_time % 60
+    minutes = (@total_time / 60) % 60
+    if minutes < 1
+      return "#{seconds.to_s} seconds"
+    elsif minutes >= 2
+      return "#{minutes.to_s} minutes #{seconds.to_s} seconds"
+    else 
+      return "#{minutes.to_s} minute #{seconds.to_s} seconds"
+    end
   end
 
   def contains?(pose_id)

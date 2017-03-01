@@ -11,19 +11,19 @@
   </p>
 
   <p>
-    <label for="hold_time"> Hold Time (in seconds): </label>
-    <select id="hold_time" name="hold_time">
-      <option <%= "selected" if @pose.hold_time == 10 %> 
+    <label for="time"> Time (in seconds): </label>
+    <select id="time" name="time">
+      <option <%= "selected" if @pose.time == 10 %> 
       value=10> 10 </option>
-      <option <%= "selected" if @pose.hold_time == 20 %> 
+      <option <%= "selected" if @pose.time == 20 %> 
       value=20> 20 </option>
-      <option <%= "selected" if @pose.hold_time == 30 %> 
+      <option <%= "selected" if @pose.time == 30 %> 
       value=30> 30 </option>
-      <option <%= "selected" if @pose.hold_time == 40 %> 
+      <option <%= "selected" if @pose.time == 40 %> 
       value=40> 40 </option>
-      <option <%= "selected" if @pose.hold_time == 50 %> 
+      <option <%= "selected" if @pose.time == 50 %> 
       value=50> 50 </option>
-      <option <%= "selected" if @pose.hold_time == 60 %> 
+      <option <%= "selected" if @pose.time == 60 %> 
       value=60> 60 </option>
     </select>
   </p>

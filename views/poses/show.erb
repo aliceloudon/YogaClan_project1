@@ -9,11 +9,11 @@
     <p> Hold Time: <%= @pose.hold_time %> seconds </p>
     <p> Effort Level: <%= @pose.effort_level %> </p>
 
-    <div class="button">
+    <div class="btn">
       <a href="/poses/<%= @pose.id %>/edit">Edit Pose</a>
     </div>
     
-    <div class="button">
+    <div class="btn">
       <form method="POST" action="/poses/<%= @pose.id %>/delete">
         <input type="submit" value="Delete Pose"/>
       </form>

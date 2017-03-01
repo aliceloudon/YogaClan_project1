@@ -1,3 +1,5 @@
+/* Below is design for the Nav bar */
+
 nav {
   width: 100%;
   float: left;
@@ -33,36 +35,17 @@ nav li a:hover {
   background-color: #fff; 
 }
 
+/* Below is design for the 'Poses/Index' page */
+
 .Grid {
   display: flex;  
   border: solid 1px white;
   flex-wrap: wrap;
 }
 
-.grid-row {
-  display: flex;
-  flex-direction: column;
-}
-
 .cell {
   display: inline-block;
   padding: 20px;
-}
-
-.cell_sequence {
-  display: inline-block;
-  padding: 20px;
-  justify-content: center;
-  border: solid 1px #8f98a8;
-  width: 200px;
-  height: 220px;
-  margin: 10px;
-}
-
-.cell_sequence p {
-    display: block;
-    font-size: 1.5em;
-    text-align: center;
 }
 
 /* Below is design for the 'View Pose' page */
@@ -90,18 +73,21 @@ nav li a:hover {
   color: #474a4f;
 }
 
-.pose_detail_text_buttons {
+/* Below is design for the 'Sequence/Index' page */
+
+.cell_sequences {
   display: inline-block;
-  size: 10px, 10px;
-  border: solid 1px #8f98a8;
+  padding: 20px;
+  border: solid 1px grey;
 }
 
-/* Below is design for the 'View Sequence' page */
+/* Below is design for the 'Show Sequence' page */
 
 .sequence_detail {
   display: block;
   height: 500px;
-  margin: 0 auto;
+  left-margin: auto;
+  right-margin: auto;
   padding: 60px;
 }
 
@@ -120,14 +106,6 @@ nav li a:hover {
 .homepage_image {
   max-width: 100%;
   height: 650px;
-}
-
-.homepage_buttons {
-    position: absolute;
-    display: block;
-    width: 200px;
-    height: 100px;
-    margin: auto;
 }
 
 /* Below is generic design that should apply to all */
@@ -153,11 +131,4 @@ a {
 .pose_image_large {
   width: 600px;
   height: 600px;
-}
-
-.button {
-  display: inline-block;
-  padding: 20px;
-  border: solid 1px #8f98a8;
-  margin: 5px;
 }

@@ -1,0 +1,6 @@
+<p>Sequence name: <%= @pose_sequence.sequence.name %></p>
+<p>Pose name: <%= @pose_sequence.pose.name %></p>
+
+<form method="POST" action="/poses_sequences/<%= @pose_sequence.id %>/delete">
+  <input type="submit" value="Delete Join"/>  
+</form>

@@ -46,15 +46,15 @@ class Sequence
     SqlRunner.run(sql)
   end
 
-  def delete_joins
-    sql = "DELETE FROM joins WHERE sequence_id = #{@id}"
+  def delete_poses_sequences
+    sql = "DELETE FROM poses_sequences WHERE sequence_id = #{@id}"
     SqlRunner.run(sql)
   end
 
   def poses
     sql = "SELECT p.* FROM poses p
-          INNER JOIN joins j ON j.pose_id = p.id
-          WHERE j.sequence_id = #{@id}"
+          INNER JOIN poses_sequences ps ON ps.pose_id = p.id
+          WHERE ps.sequence_id = #{@id}"
     poses = SqlRunner.run(sql)
     # this gives me back an array of hashes
     result = poses.map { |pose| Pose.new(pose)}

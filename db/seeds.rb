@@ -1,9 +1,9 @@
 require_relative('../models/pose.rb')
 require_relative('../models/sequence.rb')
-require_relative('../models/join.rb')
+require_relative('../models/pose_sequence.rb')
 require('pry')
 
-Join.delete_all
+PoseSequence.delete_all
 Sequence.delete_all
 Pose.delete_all
 
@@ -172,35 +172,35 @@ sequence4 = Sequence.new({
   })
 sequence4.save
 
-join1 = Join.new({
+pose_sequence_1 = PoseSequence.new({
   'pose_id' => pose1.id,
   'sequence_id' => sequence1.id
 })
-join1.save
+pose_sequence_1.save
 
-join2 = Join.new({
+pose_sequence_2 = PoseSequence.new({
   'pose_id' => pose2.id,
   'sequence_id' => sequence2.id
 })
-join2.save
+pose_sequence_2.save
 
-join3 = Join.new({
+pose_sequence_3 = PoseSequence.new({
   'pose_id' => pose3.id,
   'sequence_id' => sequence3.id
 })
-join3.save
+pose_sequence_3.save
 
-join4 = Join.new({
+pose_sequence_4 = PoseSequence.new({
   'pose_id' => pose2.id,
   'sequence_id' => sequence1.id
 })
-join4.save
+pose_sequence_4.save
 
-join5 = Join.new({
+pose_sequence_5 = PoseSequence.new({
   'pose_id' => pose3.id,
   'sequence_id' => sequence1.id
 })
-join5.save
+pose_sequence_5.save
 
 binding.pry
 nil

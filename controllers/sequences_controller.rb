@@ -2,7 +2,7 @@ require('sinatra')
 require('sinatra/contrib/all')
 require('pry-byebug')
 require_relative('../models/sequence.rb')
-require_relative('../models/join.rb')
+require_relative('../models/pose_sequence.rb')
 require_relative('../models/pose.rb')
 
 get '/sequences' do
@@ -22,8 +22,8 @@ post '/sequences' do
 
   for key, value in params
     if key.include? "pose_id"
-      join = Join.new({"pose_id" => value, "sequence_id" => sequence.id})
-      join.save    
+      pose_sequence = PoseSequence.new({"pose_id" => value, "sequence_id" => sequence.id})
+      pose_sequence.save    
     end
   end
 
@@ -45,11 +45,11 @@ end
 post '/sequences/:id' do
   sequence = Sequence.new(params)
   sequence.update
-  sequence.delete_joins
+  sequence.delete_poses_sequences
     for key, value in params
       if key.include? "pose_id"
-        join = Join.new({"pose_id" => value, "sequence_id" => sequence.id})
-        join.save    
+        pose_sequence = PoseSequence.new({"pose_id" => value, "sequence_id" => sequence.id})
+        pose_sequence.save    
       end
     end
 

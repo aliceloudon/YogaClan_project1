@@ -57,7 +57,7 @@ post '/sequences/:id' do
   redirect to "/sequences/#{sequence.id}"
 end
 
-post '/sequences/:id/delete' do
+get '/sequences/:id/delete' do
   sequence = Sequence.find(params[:id])
   sequence.delete
   redirect to "/sequences"

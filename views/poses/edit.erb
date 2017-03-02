@@ -1,5 +1,5 @@
 <form method="POST" action="/poses/<%= @pose.id %>">
-
+<div class="edit pose">
   <p>
     <label for="name"> Pose Name: </label>
     <input value="<%= @pose.name %>" type="text" name="name" id="name"/>
@@ -44,8 +44,8 @@
     </select>
   </p>
 
-  <p>
+  <div class="button">
     <input type="submit" value="Save"/>
-  </p>
-
+  </div>
+</div>
 </form>

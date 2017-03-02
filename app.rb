@@ -7,3 +7,7 @@ require_relative('controllers/poses_sequences_controller')
 get '/' do
   erb(:index)
 end
+
+get '/about' do
+  erb(:about)
+end

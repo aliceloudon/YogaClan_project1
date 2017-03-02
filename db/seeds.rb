@@ -144,7 +144,7 @@ pose19 = Pose.new({
 pose19.save
 
 pose20 = Pose.new({
-  "name" => "Shoulder Stand",
+  "name" => "Warrior 1",
   "image" => "https://media1.popsugar-assets.com/files/thumbor/c70js7VHOk0-gi2Znv4hmQ8W-f4/fit-in/1024x1024/filters:format_auto-!!-:strip_icc-!!-/2015/11/13/620/n/1922729/33084ecc_Warrior-1_Blue/i/Warrior-1-Pose.jpg",
   "time" => 30,
   "effort_level" => 4,

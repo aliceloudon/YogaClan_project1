@@ -1,26 +1,21 @@
 <div class="sequence_detail">
 
   <div class="sequence_detail_text">
-    <p><%= @sequence.name %> </p>
+    <h1><%= @sequence.name %> </h1>
     <p> <%= @sequence.format_time %></p>
-    <p> Level: <%= @sequence.average_effort %> (out of 5)</p>
+    <p> Level <%= @sequence.average_effort %> (out of 5)</p>
   </div>
-    
-    <p> Poses in Sequence: </p>
 
     <% @poses.each do |pose| %>
-        <img src = <%= pose.image %> class="pose_image_large"/>
-        <p><%= pose.name %></p>
-    <% end %>
+      <div class="show_sequence">
+          <img src = <%= pose.image %> class="pose_image_large"/>
+          <p><%= pose.name %></p>
+      </div>
+      <% end %>
 
-    <div class="btn">
-      <p><a href="/sequences/<%= @sequence.id %>/edit">Edit Sequence</a></p>
-    </div>
-
-    <div class="btn">
-      <form method="POST" action="/sequences/<%= @sequence.id %>/delete">
-        <input type="submit" value="Delete Sequence"/>  
-      </form>
-    </div>
+    <ul id="sequence_controls">
+      <li><a class="sequence_link" href="/sequences/<%= @sequence.id %>/edit">Edit Sequence</a></li>
+      <li><a class="sequence_link" href="/sequences/<%= @sequence.id %>/delete">Delete Sequence</a></li>
+    </ul>
 
 </div>

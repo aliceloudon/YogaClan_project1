@@ -8,7 +8,7 @@ class Sequence
   def initialize(options)
     @id = options['id'].to_i
     @name = options['name']
-    @total_time = nil
+    @total_time = 0
   end
 
   def save

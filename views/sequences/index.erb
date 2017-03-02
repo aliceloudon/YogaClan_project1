@@ -2,10 +2,12 @@
 
 <% @sequences.each do |sequence| %>
   <div class="cell_sequences">
-  <p><a href="/sequences/<%= sequence.id %>"><%= sequence.name %></a></p>
+    <p><a href="/sequences/<%= sequence.id %>"><%= sequence.name %></a></p>
   </div>
 <% end %>
 
-<a href="/sequences/new"><p>ADD NEW SEQUENCE</p></a>
+  <div class="cell_sequences">
+    <a href="/sequences/new"><p>ADD NEW SEQUENCE</p></a>
+  </div>
 
 </div>

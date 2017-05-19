@@ -16,5 +16,3 @@ Show a page listing all poses and sequences
 ‘Play’ the sequence, showing each image in the sequence for the recommended ‘hold time’
 Create a sequence of random poses, based upon your choice of time OR exertion level
 
-## Screenshots
-![Alt text](https://raw.githubusercontent.com/aliceloudon/YogaClan_project1/master/README/home.png?raw=true "Optional Title")
